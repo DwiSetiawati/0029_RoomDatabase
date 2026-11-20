@@ -1,4 +1,4 @@
-package com.example.act7.uicontroller
+package com.example.act7.view.uicontroller
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -16,10 +16,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.act7.R
-import com.example.act7.uicontroller.DestinasiEntry
-import com.example.act7.uicontroller.DestinasiHome
+import com.example.act7.view.route.DestinasiEntry
 import com.example.act7.view.EntrySiswaScreen
 import com.example.act7.view.HomeScreen
+import com.example.act7.view.route.DestinasiHome
 
 @Composable
 fun SiswaApp(navController: NavHostController = rememberNavController()){
