@@ -1,4 +1,4 @@
-package com.example.act7.viewmodel
+package com.example.act7.viewmodel.provider
 
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
@@ -10,11 +10,11 @@ object PenyediaViewModel {
     val Factory = viewModelFactory {
 
         initializer {
-            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+            _root_ide_package_.com.example.act7.viewmodel.HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
         }
 
         initializer {
-            EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+            _root_ide_package_.com.example.act7.viewmodel.EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
         }
 
     }
