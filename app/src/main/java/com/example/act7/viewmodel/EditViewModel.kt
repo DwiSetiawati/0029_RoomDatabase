@@ -1,0 +1,18 @@
+package com.example.act7.viewmodel
+
+import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.act7.repositori.RepositoriSiswa
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+
+class EditViewModel (
+    savedStateHandle: SavedStateHandle,
+    private val repositoriSiswa: RepositoriSiswa): ViewModel() {
+
+    var uiStateSiswa by mutableStateOf(UIStateSiswa))
+            private set
+}
