@@ -25,11 +25,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.act7.R
-import com.example.act7.uicontroller.DestinasiEntry
-import com.example.act7.uicontroller.SiswaTopAppBar
+import com.example.act7.view.route.DestinasiEntry
+import com.example.act7.view.uicontroller.SiswaTopAppBar
 import com.example.act7.viewmodel.DetailSiswa
 import com.example.act7.viewmodel.EntryViewModel
-import com.example.act7.viewmodel.PenyediaViewModel
+import com.example.act7.viewmodel.provider.PenyediaViewModel
 import com.example.act7.viewmodel.UIStateSiswa
 import kotlinx.coroutines.launch
 
