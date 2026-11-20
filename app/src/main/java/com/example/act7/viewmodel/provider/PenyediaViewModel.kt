@@ -1,22 +1,36 @@
 package com.example.act7.viewmodel.provider
 
+import android.app.Application
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.act7.AplikasiSiswa
-import androidx.lifecycle.ViewModelProvider
+import com.example.act7.viewmodel.DetailViewModel
+import com.example.act7.viewmodel.EditViewModel
+import com.example.act7.viewmodel.EntryViewModel
+import com.example.act7.viewmodel.HomeViewModel
+
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
-
         initializer {
-            _root_ide_package_.com.example.act7.viewmodel.HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
         }
 
         initializer {
-            _root_ide_package_.com.example.act7.viewmodel.EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+            EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+        //edit : tambah initializer untuk DeatailViewModel dan EditViewModel
+        initializer {
+            DetailViewModel(this.createSavedStateHandle(),
+                aplikasiSiswa().container.repositoriSiswa )
         }
 
+        initializer {
+            EditViewModel(this.createSavedStateHandle(),aplikasiSiswa().container.repositoriSiswa)
+        }
     }
 }
 
