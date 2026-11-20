@@ -1,4 +1,4 @@
-package com.example.act7.uicontroller
+package com.example.act7.view.route
 
 import com.example.act7.R
 
