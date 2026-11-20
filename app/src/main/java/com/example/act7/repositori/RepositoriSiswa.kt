@@ -1,5 +1,8 @@
 package com.example.act7.repositori
 
+import androidx.room.Delete
+import androidx.room.Query
+import androidx.room.Update
 import com.example.act7.room.Siswa
 import com.example.act7.room.SiswaDao
 import kotlinx.coroutines.flow.Flow
@@ -15,4 +18,7 @@ class OfflineRepositoriSiswa(
     override fun getAllSiswaStream(): Flow<List<Siswa>> = siswaDao
         .getAllSiswa()
     override suspend fun insertSiswa(siswa: Siswa) = siswaDao.insert(siswa)
+
+    //edit 2 : tambah 3 override berikut
+    override fun getSiswaStream(id: Int): Flow<Siswa?> = siswaDao.getSiswa(id)
 }
